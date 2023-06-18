@@ -1,0 +1,260 @@
+a {
+  text-decoration: none;
+  color: #3D8361;
+}
+
+a:hover {
+  color: 	#D6CDA4;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover, input:hover {
+  cursor: pointer;
+}
+
+h1, h2, h3 {
+  color: #1C6758;
+}
+
+
+main {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-container h1, .start-card h2,
+.login-form, .signup-form, .blogpost-card, .blogpost-container,
+.form-container, .blogpost-list {
+  box-shadow: 5px 10px 0.75rem 4px 	#646464;
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+.login-form, .signup-form, .blogposts-container, 
+.blogpost-container, .form-container, .blogpost-list {
+  margin-top: 100px;
+}
+
+/* Header Styles */
+
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+header h1 a {
+  color: 	#1C6758;
+}
+
+nav {
+  margin-right: 30px;
+}
+
+nav a {
+  margin-right: 20px;
+  font-size: 14pt;
+  color: 	#1C6758;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+
+/* Main Page Styling */
+
+/* Hero Image */
+
+.hero-container {
+  width: 100%;
+  height: 75vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container h1 {
+  font-size: 70pt;
+  background: rgba(29, 29, 29, 0.5);
+  color: #1C6758;
+}
+
+/* Getting Started Buttons */
+
+.starting-container {
+  display: flex;
+  justify-content: space-between;
+  height: 25vh;
+  width: 100%;
+}
+
+.start-card {
+  width: 50%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-card h2 {
+  font-size: 30pt;
+  background: rgba(29, 29, 29, 0.5);
+}
+
+.start-card a {
+  color: #D6CDA4;
+
+}
+
+.start-card a:hover {
+  color: #3D8361;
+}
+
+#recipeCard {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#profileCard {
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Login Styles */
+
+.login-form, .signup-form{
+  background-color: #fcfff7;
+}
+
+/* Blogposts List Styles */
+
+.blogposts-container{
+  padding: 25px;
+}
+
+.blogposts-container h1{
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.blogposts-container a {
+  font-size: 20pt;
+}
+
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.blogpost-card {
+  position: relative;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 5px 10px 0.75rem 4px grey;
+  width: 225px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  overflow: hidden;
+  text-align: center;
+  background-color: white;
+}
+
+.blogpost-card .blogpost-name {
+  position: absolute;
+  top: 20px; 
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+
+.blogpost-card .recipeImage {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.blogpost-card .blogpost-details {
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8); 
+}
+
+.blogpost-card .blogpost-details p {
+  margin: 5px 0;
+}
+
+/* Recipe Styles */
+
+.blogpost-container {
+  margin: 0 auto;
+  width: 50%;
+  background-color: #fcfff7;
+  margin-top: 100px;
+}
+
+ul{
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.blogpost-content {
+  border-radius: 15px;
+  padding: 15px;
+  border: 1px solid 	rgb(206, 206, 206);
+  margin-bottom: 15px;
+}
+
+.image-container {
+  padding: 0;
+  margin: 0;
+}
+
+/* Profile Styles */
+
+.form-container, .blogpost-list {
+  background-color: #fcfff7;
+}
+
+.blogpost-list-card {
+  border-radius: 15px;
+  padding: 15px;
+  border: 1px solid 	rgb(206, 206, 206);
+  margin-bottom: 15px;
+  width: 97%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-new-blogpost {
+  margin: 50px auto;
+  display: block; 
+}
+
+textarea {
+  resize: none;
+}
+
+/* Hidden */
+
+.hidden {
+  display: none;
+}
