@@ -1,29 +1,30 @@
 <section class="container container-fluid mt-5">
   <section class="text-center blogpost-container">
     <h2 id="blog_title">{{blog_title}}</h2>
-    <div class="blogpost-content">
-      <div class="description">
-        <p>{{{description}}}</p>
-      </div>
-      {{!-- <p>
-        <span for="img" aria-label="money"></span>
-        <span class="totalTime">{{totalTime}}</span>
-        minutes of cooking time
-      </p> --}}
-    </div>
-    <div class="blogpost-content">
-      <alt={{{blog_title}}}>
-    </div>
-    
-    <div class="blogpost-content">
-      
-      {{!-- Replace code with for each loop later --}}
-      <ul>
-        <li>  <p>{{blog_post}}</p>  </li>
-      </ul>
+
+    <div class="description">
+      <p>{{{description}}}</p>
     </div>
 
+    <div class="blogpost-content">
+      <li> <p>{{blog_post}}</p> </li>
+    </div>
 
     <p>Written by {{user.name}}</p>
   </section>
 </section>
+
+{{#each comments as |comment|}}
+  <div class="card dashboard-card">
+    <div class="card-header">
+      <h4>Comment</h4>
+    </div>
+    <div class="card-body content-card">
+      <h4>{{commentary}}</h4>
+      <footer class="blockquote-footer">Commented by:
+        {{user_name}}
+        on
+        {{format_date date_created}}</footer>
+    </div>
+  </div>
+{{/each}}

@@ -2,15 +2,18 @@
 <section class="blogposts-container">
   <h1>Posts:</h1>
   <section class="list-container">
-  {{#each blogpostss as |blogpost| }}
+  {{#each blogposts as |blogpost| }}
     <div class="blogpost-card">
       <div>
         <h2><a href="/blogpost/{{blogpost.id}}">{{blogpost.blog_title}}</a></h2>
       </div>
-      <div class="blogpost-details">
+      {{!-- <div class="blogpost-details">
         <p>By <b>{{blogpost.user.name}}</b></p>
-      </div>
+      </div> --}}
     </div>
   {{/each}}
   </section>
 </section>
+
+
+

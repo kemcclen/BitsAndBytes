@@ -26,7 +26,7 @@ main {
   background-position: center;
 }
 
-.hero-container h1, .start-card h2,
+.hero-container h1, 
 .login-form, .signup-form, .blogpost-card, .blogpost-container,
 .form-container, .blogpost-list {
   box-shadow: 5px 10px 0.75rem 4px 	#646464;
@@ -86,36 +86,9 @@ nav a {
 
 /* Getting Started Buttons */
 
-.starting-container {
-  display: flex;
-  justify-content: space-between;
-  height: 25vh;
-  width: 100%;
-}
 
-.start-card {
-  width: 50%;
-  padding: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.start-card h2 {
-  font-size: 30pt;
-  background: rgba(29, 29, 29, 0.5);
-}
-
-.start-card a {
-  color: #D6CDA4;
-
-}
-
-.start-card a:hover {
-  color: #3D8361;
-}
-
-#recipeCard {
+#blogpostCard {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -179,7 +152,7 @@ nav a {
 }
 
 
-.blogpost-card .recipeImage {
+.blogpost-card  {
   width: 100%;
   height: 70%;
   object-fit: cover;
@@ -199,7 +172,7 @@ nav a {
   margin: 5px 0;
 }
 
-/* Recipe Styles */
+/* Blogpost Styles */
 
 .blogpost-container {
   margin: 0 auto;

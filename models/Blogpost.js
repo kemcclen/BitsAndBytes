@@ -17,7 +17,7 @@ Blogpost.init(
       },
      
       blog_post: {
-        type: DataTypes.JSON, 
+        type: DataTypes.STRING, 
         allowNull: false,
       },
       user_id: {

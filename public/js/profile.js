@@ -4,15 +4,11 @@ const newBlogpost = async (event) => {
   const blog_title = document.querySelector('#blog_title').value.trim();
   const blog_post = document.querySelector('#blog_post').value.trim();
 
-  let arrStep = steps.split(',')
-  console.log(arrStep)
-  let arrInge = blog_post.split(',')
-  console.log(arrInge)
 
   if (blog_title && blog_post) {
     const response = await fetch(`/api/blogpost`, {
       method: 'POST',
-      body: JSON.stringify({ blog_title, blog_post}),
+      body: JSON.stringify({ blog_title, blog_post }),
       headers: {
         'Content-Type': 'application/json',
       },
