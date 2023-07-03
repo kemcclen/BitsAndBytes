@@ -23,25 +23,10 @@ const newBlogpost = async (event) => {
   }
 };
 
-// const delButtonHandler = async (event) => {
-//   if (event.target.id === 'deleteBtn' ) {
-//     const id = event.target.getAttribute('data-id');
-
-//     const response = await fetch(`/api/blogpost/${id}`, {
-//       method: 'DELETE',
-//     });
-
-//     if (response.ok) {
-//       document.location.replace('/profile');
-//     } else {
-//       alert('Failed to delete post');
-//     }
-//   } 
-// };
 
 const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
+  if (event.target.parentNode.hasAttribute('data-id')) {
+    const id = event.target.parentNode.getAttribute('data-id');
 
     const response = await fetch(`/api/blogpost/${id}`, {
       method: 'DELETE',
