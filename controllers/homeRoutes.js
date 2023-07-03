@@ -26,7 +26,7 @@ console.log(blogpostData);
     res.status(500).json(err);
   }
 });
-router.get('/blogposts', async (req, res) => {
+router.get('/blogpost', async (req, res) => {
   try {
     // Get all blogposts and JOIN with user data
     const blogpostData = await Blogpost.findAll({

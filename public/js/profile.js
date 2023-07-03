@@ -3,12 +3,12 @@ const newBlogpost = async (event) => {
 
   const blog_title = document.querySelector('#blog_title').value.trim();
   const blog_post = document.querySelector('#blog_post').value.trim();
+  const date = new Date().toDateString();
 
-
-  if (blog_title && blog_post) {
+  if (blog_title && blog_post && date) {
     const response = await fetch(`/api/blogpost`, {
       method: 'POST',
-      body: JSON.stringify({ blog_title, blog_post }),
+      body: JSON.stringify({ blog_title, blog_post, date }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -23,6 +23,21 @@ const newBlogpost = async (event) => {
   }
 };
 
+// const delButtonHandler = async (event) => {
+//   if (event.target.id === 'deleteBtn' ) {
+//     const id = event.target.getAttribute('data-id');
+
+//     const response = await fetch(`/api/blogpost/${id}`, {
+//       method: 'DELETE',
+//     });
+
+//     if (response.ok) {
+//       document.location.replace('/profile');
+//     } else {
+//       alert('Failed to delete post');
+//     }
+//   } 
+// };
 
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
@@ -40,7 +55,10 @@ const delButtonHandler = async (event) => {
   }
 };
 
-const newPost = () => {
+
+
+
+function newPost() {
   let form = document.querySelector('.form-container');
   let postList = document.querySelector('.blogpost-list');
   let postBtn = document.querySelector('#newBlogpostBtn');
