@@ -2,12 +2,12 @@ const newComment = async (event) => {
   event.preventDefault();
   
   const blog_comment = document.querySelector('#blog_comment').ariaValueMax.trim();
-  const date = new Date().toDateString();
 
-  if (blog_comment &&  date) {
+
+  if (blog_comment) {
     const response = await fetch(`/api/blogpost`, {
       method: 'POST',
-      body: JSON.stringify({ blog_comment, date }),
+      body: JSON.stringify({ blog_comment }),
       headers: {
         'Content-Type': 'application/json',
       },

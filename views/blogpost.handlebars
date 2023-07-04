@@ -26,10 +26,11 @@
   {{#each comments as |comment|}}
     <div class="comment-list-card">
       <p>{{comment.blog_comment}}</p>
-      <p><b>{{blog_comment.user.name}}</b> {{format_date blog_comment.date}}</p>
+      <p><b>{{blog_comment.user.name}}</b> </p>
 
     </div>
   {{/each}}
+  {{/if}}
   {{#if logged_in}}
 
     {{! <button class="btn btn-info" id="addComments"> + Add Comment</button> }}
