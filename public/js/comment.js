@@ -1,38 +1,73 @@
-const newComment = () => {
-    let form = document.querySelector('.comment-container');
-    form.classList.remove("hidden");
-    document.querySelector('#addComments').classList.add('hidden')
-  }
+const newComment = async (event) => {
+  event.preventDefault();
   
-  const newFormHandler = async (event) => {
-    event.preventDefault();
-  
-    const content = document.querySelector('#post-comment').value.trim();
-    const date = new Date().toDateString();
-   
-  
-    if (content && date) {
-      const response = await fetch(`/api/comments/${id}`, {
-        method: 'POST',
-        body: JSON.stringify({ content, date }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-  
-      if (response.ok) {
-        document.location.reload();
-      } else {
-        alert('Failed to create comment');
-      }
+  const blog_comment = document.querySelector('#blog_comment').ariaValueMax.trim();
+  const date = new Date().toDateString();
+
+  if (blog_comment &&  date) {
+    const response = await fetch(`/api/blogpost`, {
+      method: 'POST',
+      body: JSON.stringify({ blog_comment, date }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      document.location.replace('/profile');
+    } else {
+      console.log(response);
+      alert('Failed to create project');
     }
-  };
-  
-  document.querySelector('.new-comment-form').addEventListener('submit', newFormHandler);
-  
-  document.querySelector('#addComments').addEventListener('click', newComment);
-  document.querySelector('#cancel-form').addEventListener('click', () => {
-    let form = document.querySelector('.comment-container');
-    form.classList.add("hidden");
-    document.querySelector('#addComments').classList.remove('hidden')
-  });
+  }
+};
+
+ 
+const delButtonHandler = async (event) => {
+  if (event.target.parentNode.hasAttribute('data-id')) {
+    const id = event.target.parentNode.getAttribute('data-id');
+
+    const response = await fetch(`/api/blogpost/${id}`, {
+      method: 'DELETE',
+    });
+
+    if (response.ok) {
+      document.location.replace('/profile');
+    } else {
+      alert('Failed to delete project');
+    }
+  }
+};
+
+function newCom() {
+  let form = document.querySelector('.comment-container');
+  let comBtn = document.querySelector('#newCommentBtn');
+
+  postList.classList.add('hidden');
+  form.classList.remove("hidden");
+  comBtn.classList.add('hidden');
+}
+
+const cancelCom = () => {
+  let form = document.querySelector('.form-container');
+  let postList = document.querySelector('.blogpost-list');
+  let postBtn = document.querySelector('#newBlogpostBtn');
+
+  postList.classList.remove('hidden');
+  form.classList.add("hidden");
+  postBtn.classList.remove('hidden')
+}
+
+document
+  .querySelector('.new-comment-form')
+  .addEventListener('submit', newComment);
+
+document
+  .querySelector('.comment-list')
+  .addEventListener('click', delButtonHandler);
+
+  document.querySelector('#newCommentBtn').addEventListener('click', newCom);
+
+  document.querySelector('#cancel-comment').addEventListener('click', cancelCom);
+   
+
