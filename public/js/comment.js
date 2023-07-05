@@ -1,7 +1,7 @@
 const newComment = async (event) => {
   event.preventDefault();
   
-  const blog_comment = document.querySelector('#blog_comment').ariaValueMax.trim();
+  const blog_comment = document.querySelector('#blog_comment').value.trim();
 
 
   if (blog_comment) {
