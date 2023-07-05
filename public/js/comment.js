@@ -43,10 +43,11 @@ function newCom() {
   let form = document.querySelector('.comment-container');
   let postList = document.querySelector('.comment-list');
   let comBtn = document.querySelector('#newCommentBtn');
-  
+  let blogpostList = document.querySelector('.blogpost-container');
 
+  blogpostList.classList.add('hidden');
   postList.classList.add('hidden');
-  form.classList.remove("hidden");
+  form.classList.remove('hidden');
   comBtn.classList.add('hidden');
 }
 
