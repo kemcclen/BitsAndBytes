@@ -303,6 +303,17 @@ li {
               inset 13px 13px 26px #ffffff;
 }
 
+.comment-container {
+  margin: 0 auto;
+  width: 72%;
+  margin-top: 100px;
+  padding: 20px; 
+  border-radius: 44px;
+  background: #dcddd7;
+  box-shadow: inset -13px -13px 26px #82827f,
+              inset 13px 13px 26px #ffffff;
+}
+
 .comment-card {
   padding: 15px;
  margin-bottom: 10px; 

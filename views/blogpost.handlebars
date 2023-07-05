@@ -18,7 +18,7 @@
 
 <h2> hello</h2>
 
-{{! comments  }}
+{{! all comments  block}}
 
 <div class="comment-list">
   <h3>Comments: </h3>
@@ -31,26 +31,36 @@
     </div>
   {{/each}}
   {{/if}}
+  </div>
+
+
   {{#if logged_in}}
-
-    {{! <button class="btn btn-info" id="addComments"> + Add Comment</button> }}
-
   {{/if}}
+
+{{!-- create comment block --}}
   <div class="comment-container hidden">
+    <h3>Create a Comment:</h3>
     <form class="form new-comment-form">
       <div class="form-group">
-        <label for="post-comment">Comment:</label>
+      
         <input
           class="form-input" type="text" id="blog_comment" name="blog_comment"/>
       </div>
 
- <button type="submit" class="btn btn-primary">Create</button>
+
+         <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
 
 
         <button type="button" id="cancel-comment" class="btn btn-secondary">Cancel</button>
+
+
+
+      </div>
    
     </form>
   </div>
-</div>
+
+
 
 <script src="./js/comment.js"></script>

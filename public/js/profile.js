@@ -49,7 +49,7 @@ function newPost() {
   let postBtn = document.querySelector('#newBlogpostBtn');
 
   postList.classList.add('hidden');
-  form.classList.remove("hidden");
+  form.classList.remove('hidden');
   postBtn.classList.add('hidden');
 }
 
@@ -59,7 +59,7 @@ const cancelPost = () => {
   let postBtn = document.querySelector('#newBlogpostBtn');
 
   postList.classList.remove('hidden');
-  form.classList.add("hidden");
+  form.classList.add('hidden');
   postBtn.classList.remove('hidden')
 }
 
@@ -71,6 +71,7 @@ document
   .querySelector('.blogpost-list')
   .addEventListener('click', delButtonHandler);
 
+  // To create new post
   document.querySelector('#newBlogpostBtn').addEventListener('click', newPost);
 
   document.querySelector('#cancel-form').addEventListener('click', cancelPost);

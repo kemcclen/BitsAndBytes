@@ -52,13 +52,15 @@ function newCom() {
 }
 
 const cancelCom = () => {
-  let form = document.querySelector('.form-container');
+  let form = document.querySelector('.comment-container');
   let postList = document.querySelector('.comment-list');
-  let postBtn = document.querySelector('#newBlogpostBtn');
+  let postBtn = document.querySelector('#newCommenttBtn');
+  let blogpostList = document.querySelector('.blogpost-container');
 
+  form.classList.add('hidden');
   postList.classList.remove('hidden');
-  form.classList.add("hidden");
-  postBtn.classList.remove('hidden')
+  postBtn.classList.remove('hidden');
+  blogpostList.classList.remove('hidden');
 }
 
 document
@@ -69,6 +71,7 @@ document
   .querySelector('.comment-list')
   .addEventListener('click', delButtonHandler);
 
+  //create new comment 
   document.querySelector('#newCommentBtn').addEventListener('click', newCom);
 
   document.querySelector('#cancel-comment').addEventListener('click', cancelCom);
