@@ -6,7 +6,7 @@
   {{#each blogposts as |blogpost| }}
     <div class="blogpost-card">
       <div>
-        <h2><a href="/blogpost/{{blogpost.id}}">{{blogpost.blog_title}}</a></h2>
+        <h2><a href="/blogpost?commentId={{blogpost.id}}">{{blogpost.blog_title}}</a></h2>
       </div>
      
       {{!-- <div class="blogpost-details">

@@ -41,7 +41,9 @@ const delButtonHandler = async (event) => {
 
 function newCom() {
   let form = document.querySelector('.comment-container');
+  let postList = document.querySelector('.comment-list');
   let comBtn = document.querySelector('#newCommentBtn');
+  
 
   postList.classList.add('hidden');
   form.classList.remove("hidden");
@@ -50,7 +52,7 @@ function newCom() {
 
 const cancelCom = () => {
   let form = document.querySelector('.form-container');
-  let postList = document.querySelector('.blogpost-list');
+  let postList = document.querySelector('.comment-list');
   let postBtn = document.querySelector('#newBlogpostBtn');
 
   postList.classList.remove('hidden');
