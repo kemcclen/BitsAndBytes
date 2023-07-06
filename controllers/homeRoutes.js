@@ -54,8 +54,8 @@ console.log(blogpostData);
 
 router.get('/blogpost', async (req, res) => {
   try {
-    const {commentId} = req.query;
-    const blogpostData = await Blogpost.findByPk(commentId, {
+    const {blogpostId} = req.query;
+    const blogpostData = await Blogpost.findByPk(blogpostId, {
       include: [ User, 
         {
           model: Comments,

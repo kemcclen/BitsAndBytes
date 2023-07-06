@@ -2,12 +2,14 @@ const newComment = async (event) => {
   event.preventDefault();
   
   const blog_comment = document.querySelector('#blog_comment').value.trim();
+  const date = new Date().toDateString();
+  const blogpostId = window.location.href.slice(-2);
+  console.log(blogpostId);
 
-
-  if (blog_comment) {
-    const response = await fetch(`/api/blogpost`, {
+  if (blog_comment && date ) {
+    const response = await fetch(`/api/comment`, {
       method: 'POST',
-      body: JSON.stringify({ blog_comment }),
+      body: JSON.stringify({ blog_comment, blogpostId, date }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -27,7 +29,7 @@ const delButtonHandler = async (event) => {
   if (event.target.parentNode.hasAttribute('data-id')) {
     const id = event.target.parentNode.getAttribute('data-id');
 
-    const response = await fetch(`/api/blogpost/${id}`, {
+    const response = await fetch(`/api/comment/${id}`, {
       method: 'DELETE',
     });
 
@@ -54,13 +56,13 @@ function newCom() {
 const cancelCom = () => {
   let form = document.querySelector('.comment-container');
   let postList = document.querySelector('.comment-list');
-  let postBtn = document.querySelector('#newCommenttBtn');
+  let postBtn = document.querySelector('#newCommentBtn');
   let blogpostList = document.querySelector('.blogpost-container');
 
   form.classList.add('hidden');
   postList.classList.remove('hidden');
-  postBtn.classList.remove('hidden');
   blogpostList.classList.remove('hidden');
+  postBtn.classList.remove('hidden');
 }
 
 document

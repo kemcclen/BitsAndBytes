@@ -5,6 +5,7 @@
       <li> <p>{{blog_post}}</p> </li>
     </div>
     <p>Written by {{user.name}}</p>
+    <p> {{format_date date}}</p>
 
     {{!-- New comment button --}}
     <input
@@ -27,6 +28,7 @@
     <div class="comment-list-card">
       <p>{{comment.blog_comment}}</p>
       <p><b>{{blog_comment.user.name}}</b> </p>
+      <p>{{format_date date}}</p>
 
     </div>
   {{/each}}
