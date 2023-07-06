@@ -23,6 +23,32 @@ const newBlogpost = async (event) => {
   }
 };
 
+const updateButtonHandler = async (event) => {
+  if (event.target.parentNode.hasAttribute('data-id')) {
+    const id = event.target.parent.Node.getAttribute('data-id');
+  
+    const blog_title = document.querySelector('#blog_title').value.trim();
+    const blog_post = document.querySelector('#blog_post').value.trim();
+
+    if (blog_title && blog_post) {
+      const response = await fetch(`/api/posts/${id}`, {
+        method: 'PUT',
+        body: JSON.stringify({ blog_title, blog_post }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        document.location.replace('/profile');
+      } else {
+        console.log(response);
+        alert('Failed to update project');
+      }
+    }
+  }
+};
+
 
 const delButtonHandler = async (event) => {
   if (event.target.parentNode.hasAttribute('data-id')) {
@@ -76,3 +102,4 @@ document
 
   document.querySelector('#cancel-form').addEventListener('click', cancelPost);
 
+  document.querySelector('.BtnUpdate').addEventListener('submit', updateButtonHandler);
