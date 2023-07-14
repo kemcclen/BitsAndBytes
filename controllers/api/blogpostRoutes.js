@@ -1,7 +1,8 @@
 const router = require('express').Router();
-const { Blogpost } = require('../../models');
+const { Blogpost, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+//create a new blogpost 
 router.post('/', async (req, res) => {
   const { blog_title, blog_post } = req.body;
 console.log(blog_title, blog_post);
@@ -24,6 +25,7 @@ const blogpostDate = new Date()
   }
 });
 
+//??? idealy router.get id for single post -> rnbeing used for comments 
 router.put('/:id', async (req, res) => {
   try {
     const putPost = await Blogpost.update(req.body, {
@@ -38,6 +40,29 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+//some kind of put route????? should it be like /update/id???
+//trouble getting id use same logic as gewtting id for comment 
+router.put('/update/:id', async (req, res) => {
+  const blogpostDate = new Date();
+  try {
+    const newBlogpost = await Blogpost.create({
+      blog_title: req.body.blog_title,
+      blog_post: req.body.blog_post,
+      date: blogpostDate
+    }, {
+      where: {
+        id: req.params.id
+      }
+    });
+    
+    res.status(200).json(newBlogpost);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+//delete a post
 router.delete('/:id', async (req, res) => {
   try {
     const blogpostData = await Blogpost.destroy({
