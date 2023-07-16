@@ -28,15 +28,16 @@ const updateButtonHandler = async (event) => {
         }
       };
 
-      // document.querySelectorAll('.BtnUpdate').forEach(item => item.addEventListener('submit', updateButtonHandler));
+      document.querySelectorAll('.submitUpdate').forEach(item => item.addEventListener('submit', updateButtonHandler));
 
     // make sure i pass the blog posts specific id im updating so when i get to that page i have a function that fetches that blogpost 
 
     function updateForm() {
       
-      let updateForm = document.querySelector('.update-container');
-      let postList = document.querySelector('.container-fluid');
+      let updateForm = document.querySelector('#updateContainer');
+      let postList = document.querySelector('.blogpost-list');
       let postBtn = document.querySelector('#newBlogpostBtn');
+      
     
       postList.classList.add('hidden');
       postBtn.classList.add('hidden');
@@ -44,6 +45,18 @@ const updateButtonHandler = async (event) => {
   
     };
 
+
+
     document.querySelector('.BtnUpdate').addEventListener('click', updateForm);
    
   
+    const cancelPost = () => {
+      let updateForm = document.querySelector('#updateContainer');
+      let postList = document.querySelector('.blogpost-list');
+      let postBtn = document.querySelector('#newBlogpostBtn');
+    
+      postList.classList.remove('hidden');
+      postBtn.classList.remove('hidden');
+      updateForm.classList.add('hidden');
+    }
+    document.querySelector('#cancel-form').addEventListener('click', cancelPost);

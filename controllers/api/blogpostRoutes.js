@@ -40,16 +40,39 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-//some kind of put route????? should it be like /update/id???
+
 //trouble getting id use same logic as gewtting id for comment 
-router.put('/update/:id', async (req, res) => {
-  const blogpostDate = new Date();
+// router.put('/:id', async (req, res) => {
+//   const blogpostDate = new Date();
+//   try {
+//     const newBlogpost = await Blogpost.create({
+//       blog_title: req.body.blog_title,
+//       blog_post: req.body.blog_post,
+//       date: blogpostDate
+//     }, {
+//       where: {
+//         id: req.params.id
+//       }
+//     });
+    
+//     res.status(200).json(newBlogpost);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
+router.put('/:id', async (req, res) => {
+ 
   try {
-    const newBlogpost = await Blogpost.create({
+    // const blogpostDate = new Date();
+
+    const newBlogpost = await Blogpost.update(
+      {
       blog_title: req.body.blog_title,
       blog_post: req.body.blog_post,
-      date: blogpostDate
-    }, {
+      // date: blogpostDate
+    },
+     {
       where: {
         id: req.params.id
       }
