@@ -15,7 +15,7 @@ Bits and Bytes is a CMS-style blog site similar to a Wordpress site, where devel
 
 ## Usage:
 
-**Interface**: Please visit Bits and Bytes using the Herku link. 
+**Interface**: Please visit Bits and Bytes using the Heroku link. 
 
 **User**: As a user of Bits and Bytes you can:
 - Create an account
