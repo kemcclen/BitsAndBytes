@@ -79,7 +79,7 @@ document
   // To create new post
   document.querySelector('#newBlogpostBtn').addEventListener('click', newPost);
 
-  document.querySelector('#cancel-form').addEventListener('click', cancelPost);
+  document.querySelectorAll('.cancelBtn').forEach (item => item.addEventListener('click', cancelPost));
 
 
 });

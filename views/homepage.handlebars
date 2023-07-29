@@ -1,22 +1,21 @@
 <!-- Loop over each object in the projects array -->
 <section class="blogposts-container">
-  {{!-- <div class="hero-container">
-  </div> --}}
+
   <section class="list-container">
   {{#each blogposts as |blogpost| }}
     <div class="blogpost-card">
       <div>
-        <h2><a href="/blogpost?blogpostId={{blogpost.id}}">{{blogpost.blog_title}}</a></h2>
+        <h2><a href="/blogpost?blogpostId={{blogpost.id}}">
+        {{blogpost.blog_title}}
+        </a></h2>
       </div>
      
-      {{!-- <div class="blogpost-details">
-        <p>By <b>{{blogpost.user.name}}</b></p>
-      </div> --}}
+    
       </section>
    
   {{/each}}
   
-   <h2> Hiiiiii</h2>
+<h1> hi</h1>
 </section>
 
 

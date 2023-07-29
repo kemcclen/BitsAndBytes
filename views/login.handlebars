@@ -1,4 +1,6 @@
 <section class="container container-fluid mt-5">
+
+  {{!-- login form --}}
   <form class="form login-form">
     <h2>Log In:</h2>
     <div class="form-group">
@@ -9,20 +11,19 @@
       <label for="password-login">Password:</label>
       <input class="form-input" type="password" id="password-login" />
     </div>
-   
+
     <div class="form-group">
-      {{!-- <button class="btn btn-primary" type="submit">LOG </button> --}}
+
+      <button class="loginBtn" type="submit">
+        <span>Log In</span>
+       
+      </button>
    
+   
+    </div>
 
-    <button class="cta" type="submit">
-  <span>Log In</span>
-  <svg viewBox="0 0 13 10" height="10px" width="15px">
-    <path d="M1,5 L11,5"></path>
-    <polyline points="8 1 12 5 8 9"></polyline>
-  </svg>
-</button>
- </div>
 
+{{!-- create account form  --}}
     <div class="form-group">
       <a class="" id="createAccount">Create Account</a>
     </div>
@@ -44,14 +45,11 @@
     </div>
 
     <div class="form-group">
-      {{!-- <button class="btn btn-primary" type="submit">signup</button> --}}
-       <button class="cta" type="submit">
-  <span>Sign Up</span>
-  <svg viewBox="0 0 13 10" height="10px" width="15px">
-    <path d="M1,5 L11,5"></path>
-    <polyline points="8 1 12 5 8 9"></polyline>
-  </svg>
-</button>
+
+      <button class="signupBtn" type="submit">
+        <span>Sign Up</span>
+       
+      </button>
     </div>
 
     <div class="form-group">
@@ -60,4 +58,4 @@
   </form>
 </section>
 
-<script src='./js/login.js'></script>
+<script src="./js/login.js"></script>
