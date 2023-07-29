@@ -1,7 +1,7 @@
-# BitsAndBytes
+# TechNet
 
 ## Description:
-Bits and Bytes is a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.
+TechNet is a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.
 
 ## Table of Contents
 
@@ -15,9 +15,9 @@ Bits and Bytes is a CMS-style blog site similar to a Wordpress site, where devel
 
 ## Usage:
 
-**Interface**: Please visit Bits and Bytes using the Heroku link. 
+**Interface**: Please visit TechNet using the Heroku link. 
 
-**User**: As a user of Bits and Bytes you can:
+**User**: As a user of TechNet you can:
 - Create an account
 - Log into your account
 - Create blog posts
@@ -32,32 +32,32 @@ Bits and Bytes is a CMS-style blog site similar to a Wordpress site, where devel
 ## Demonstration:
 
 1. **Home Page** 
-![name](/assets/)
+![home](./assets/home.png)
 
 2. **Create an Account** 
-![name](/assets/)
+![sign up](./assets/signup.png)
 
 3. **Log into your Account**
-![name](/assets/)
+![log in](./assets/login.png)
 
 4. **Create a Blogpost** 
-![name](/assets/)
+![create a post](./assets/newpost.png)
 
 5. **Update a Blogpost**
-![name](/assets/)
+![update a post](./assets/update.png)
 
-6. **Delete a Blogpost** 
-![name](/assets/)
+6. **View a Single Post** 
+![single post](./assets/singlepost.png)
 
-7. **Comment on a Blogpost** 
-![name](/assets/)
+6. **Comment on a Blogpost** 
+![comment](./assets/comment.png)
 
 
 ## Contributions: 
 
-Contributions to Bits and Bytes are welcome! If you have any improvements, bug fixes, or new features to add, feel free to submit a pull request.
+Contributions to TechNet are welcome! If you have any improvements, bug fixes, or new features to add, feel free to submit a pull request.
 
-To contribute to Bits and Bytes, please follow these steps:
+To contribute to TechNet, please follow these steps:
 
 1. Fork the repository.
 2. Create a new branch for your feature or bug fix.
@@ -73,7 +73,7 @@ Please note that by submitting a pull request, you agree to allow the project ma
 Thank you for considering contributing to Bits and Bytes. Your contributions are highly appreciated!
 
 ## Links: 
-- Repository: https://github.com/kemcclen/BitsAndBytes
+- Repository: 
 - Deployed Application: 
 
 
@@ -90,8 +90,8 @@ Thank you for considering contributing to Bits and Bytes. Your contributions are
 - [uiverse.io](https://uiverse.io/buttons) for buttons 
 
 ## License:
-TastyBytes is licensed under the [MIT License](https://opensource.org/license/mit/).
+TechNet is licensed under the [MIT License](https://opensource.org/license/mit/).
 
 _The MIT License is a permissive open-source license that allows you to use, modify, and distribute the project for both commercial and non-commercial purposes. It provides you with the freedom to customize the application to suit your needs._
 
-_By contributing to TastyBytes, you agree that your contributions will be licensed under the same MIT License. This ensures that the project remains open-source and accessible to the community._
+_By contributing to TechNet, you agree that your contributions will be licensed under the same MIT License. This ensures that the project remains open-source and accessible to the community._
