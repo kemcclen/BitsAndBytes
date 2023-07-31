@@ -4,16 +4,24 @@
   /* font-family: 'Archivo', sans-serif;
 font-family: 'Tenor Sans', sans-serif;
 font-family: 'Lora', serif; */
+* {
+  background-color: #121212;
+}
+section .container-fluid {
+  background-color: #121212;
+}
 
  h1, h2, h3, h4, label, span, a {
   font-family: 'Tenor Sans', sans-serif;
   text-decoration: none;
   color: #e9ecef;
+  background-color: transparent;
 }
 
 p {
   font-family: 'Lora', serif;
   color: #e9ecef;
+  background-color: transparent;
 }
 
 header {
@@ -44,6 +52,8 @@ main {
   background-color: #121212;
 }
 
+
+
 a:hover {
   text-decoration: none;
   color: #c88672;
@@ -62,6 +72,7 @@ inset 13px 13px 26px #272626;
 
 .blogpost-list {
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 button:hover, input:hover {
@@ -111,11 +122,18 @@ font-size: 20px;
   font-size: 20pt;
 } 
 
-.list-container {
+/* .list-container {
    display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-bottom: 25px; 
+} */
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 25px;
 }
 
  .blogpost-card {
@@ -282,4 +300,5 @@ textarea {
   display: block;
   font-family: 'Tenor Sans', sans-serif;
   font-weight: 500;
+  background-color: transparent;
 }
