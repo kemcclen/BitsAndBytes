@@ -1,21 +1,21 @@
 <section class="container container-fluid mt-5">
 
   <div class="row mt-4">
-
+    {{! new blogpost }}
     <input
       type="button"
       value="+ New Blogpost"
       class="btnNew btn-info btn-new-blogpost"
       id="newBlogpostBtn"
     />
-
+    {{! all posts }}
     <div class="col-md-12 blogpost-list">
       <h2>Posts:</h2>
       {{#if blogposts.length}}
         {{#each blogposts as |blogpost index|}}
 
           <div class="row mb-2 blogpost-list-card">
-            <div class="col-md-10 ">
+            <div class="col-md-10">
               <h4><a
                   href="/blogpost?blogpostId={{blogpost.id}}"
                 >{{blogpost.blog_title}}</a></h4>
@@ -26,11 +26,16 @@
               <div data-id="{{index}}" class="text">Update</div>
             </button>
 
-            <button class="BtnDel" id="deleteButtonId" data-id="{{blogpost.id}}">
+            <button
+              class="BtnDel"
+              id="deleteButtonId"
+              data-id="{{blogpost.id}}"
+            >
               <div class="text">Delete</div>
             </button>
 
           </div>
+
           {{! update container }}
 
           <div class="update-container hidden" id="updateContainer">

@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Comments } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-
+//create a comment
 router.post('/', async (req, res) => {
   const { blog_comment, blogpostId } = req.body;
   const blogpostDate = new Date()
@@ -18,14 +18,13 @@ router.post('/', async (req, res) => {
       console.log(newComment);
   
       res.status(200).json(newComment);
-      // res.status(200).json(searchResult);
     } catch (err) {
       console.log(err);
       res.status(400).json(err);
     }
   });
 
-
+//delete a comment
   router.delete('/:id', async (req, res) => {
     try {
       const commentData = await Comments.destroy({

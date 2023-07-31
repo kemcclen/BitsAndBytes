@@ -1,6 +1,7 @@
 const newComment = async (event) => {
   event.preventDefault();
   
+  //create comment on specific blogpost
   const blog_comment = document.querySelector('#blog_comment').value.trim();
   const date = new Date().toDateString();
   const blogpostId = window.location.href.slice(-2);
@@ -24,7 +25,7 @@ const newComment = async (event) => {
   }
 };
 
- 
+ //delete comment
 const delButtonHandler = async (event) => {
   if (event.target.parentNode.hasAttribute('data-id')) {
     const id = event.target.parentNode.getAttribute('data-id');
@@ -41,6 +42,7 @@ const delButtonHandler = async (event) => {
   }
 };
 
+//write a new comment
 function newCom() {
   let form = document.querySelector('.comment-container');
   let postList = document.querySelector('.comment-list');
@@ -53,6 +55,7 @@ function newCom() {
   comBtn.classList.add('hidden');
 }
 
+//cancel comment form
 const cancelCom = () => {
   let form = document.querySelector('.comment-container');
   let postList = document.querySelector('.comment-list');

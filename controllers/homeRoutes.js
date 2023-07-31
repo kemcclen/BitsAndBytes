@@ -27,30 +27,6 @@ console.log(blogpostData);
   }
 });
 
-// router.get('/blogposts', async (req, res) => {
-//   try {
-//     // Get all blogposts and JOIN with user data
-//     const blogpostData = await Blogpost.findAll({
-//       include: [
-//         {
-//           model: User,
-//           attributes: ['name'],
-//         },
-//       ],
-//     });
-
-//     // Serialize data so the template can read it
-//     const blogposts = blogpostData.map((blogpost) => blogpost.get({ plain: true }));
-
-//     // Pass serialized data and session flag into template
-//     res.render('blogpost', { 
-//       blogposts, 
-//       logged_in: req.session.logged_in 
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
 
 router.get('/blogpost', async (req, res) => {
   try {

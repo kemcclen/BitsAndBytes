@@ -18,14 +18,13 @@ const blogpostDate = new Date()
     console.log(newBlogpost);
 
     res.status(200).json(newBlogpost);
-    // res.status(200).json(searchResult);
   } catch (err) {
     console.log(err);
     res.status(400).json(err);
   }
 });
 
-//??? idealy router.get id for single post -> rnbeing used for comments 
+//??? update with a comment
 router.put('/:id', async (req, res) => {
   try {
     const putPost = await Blogpost.update(req.body, {
@@ -40,37 +39,17 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-
-//trouble getting id use same logic as gewtting id for comment 
-// router.put('/:id', async (req, res) => {
-//   const blogpostDate = new Date();
-//   try {
-//     const newBlogpost = await Blogpost.create({
-//       blog_title: req.body.blog_title,
-//       blog_post: req.body.blog_post,
-//       date: blogpostDate
-//     }, {
-//       where: {
-//         id: req.params.id
-//       }
-//     });
-    
-//     res.status(200).json(newBlogpost);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
+//update post
 router.put('/:id', async (req, res) => {
  
   try {
-    // const blogpostDate = new Date();
+   
 
     const newBlogpost = await Blogpost.update(
       {
       blog_title: req.body.blog_title,
       blog_post: req.body.blog_post,
-      // date: blogpostDate
+     
     },
      {
       where: {

@@ -1,7 +1,7 @@
 
 window.addEventListener("load", (event) => {
   
-
+//write a new blogpost
 const newBlogpost = async (event) => {
   event.preventDefault();
 
@@ -27,7 +27,7 @@ const newBlogpost = async (event) => {
   }
 };
 
-
+//delete blogposts
 const delButtonHandler = async (event) => {
   console.log('pressed');
   if (event.target.parentNode.hasAttribute('data-id')) {
@@ -47,7 +47,7 @@ const delButtonHandler = async (event) => {
 
 
 
-
+//write a new post open form 
 function newPost() {
   let form = document.querySelector('.form-container');
   let postList = document.querySelector('.blogpost-list');
