@@ -4,7 +4,10 @@ const newComment = async (event) => {
   //create comment on specific blogpost
   const blog_comment = document.querySelector('#blog_comment').value.trim();
   const date = new Date().toDateString();
-  const blogpostId = window.location.href.slice(-2);
+  console.log(window.location.href);
+  const currentURL = window.location.href;
+  const regExPattern = /(?<==)([^&]+)/;
+  const blogpostId = currentURL.match(regExPattern)[1];
   console.log(blogpostId);
 
   if (blog_comment && date ) {
