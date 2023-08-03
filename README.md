@@ -73,8 +73,8 @@ Please note that by submitting a pull request, you agree to allow the project ma
 Thank you for considering contributing to Bits and Bytes. Your contributions are highly appreciated!
 
 ## Links: 
-- Repository: 
-- Deployed Application: 
+- Repository: https://github.com/kemcclen/TechNet
+- Deployed Application: https://technet-0016a9aebc4f.herokuapp.com/
 
 
 ## Technologies
